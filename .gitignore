@@ -1,1 +1,5 @@
 crowd-control-blueprint.pdf
+venv/
+__pycache__/
+*.pyc
+.env
