@@ -1,14 +1,19 @@
 from fastapi import FastAPI
-from app.database import engine, Base
-from app import models
-from app.routes import venues
+from fastapi.middleware.cors import CORSMiddleware
+from app.routes.occupancy import router as occupancy_router
 
- 
 app = FastAPI()
 
-Base.metadata.create_all(bind=engine)
-app.include_router(venues.router)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(occupancy_router)
 
 @app.get("/")
 def home():
-    return {"message": "Crowd Control Backend"}
+    return {"message": "Crowd Control backend running"}
