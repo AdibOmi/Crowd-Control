@@ -38,3 +38,50 @@ body {
   background: #22c55e;
   border-radius: 50%;
 }
+
+.level {
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.level.low {
+  background: #22c55e;
+  color: black;
+}
+
+.level.medium {
+  background: #eab308;
+  color: black;
+}
+
+.level.high {
+  background: #ef4444;
+  color: white;
+}
+
+.person-dot.low {
+  background: #22c55e;
+}
+
+.person-dot.medium {
+  background: #eab308;
+}
+
+.person-dot.high {
+  background: #ef4444;
+}
+
+.button-group {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.button-group button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
